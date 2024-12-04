@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  delta-sharing-server:
+    image: deltaio/delta-sharing-server:0.7.8
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./kamal:/data/kamal
+      - ./config/delta-sharing-server-config.yaml:/config/delta-sharing-server-config.yaml
+    command: ["--config", "/config/delta-sharing-server-config.yaml"]

@@ -1,0 +1,12 @@
+{
+    "shareCredentialsVersion": 1,
+    "endpoint": "http://localhost:8080",
+    "shares": [
+      {
+        "share": "kamal_parquets",
+        "schema": "default",
+        "table": "all_parquets"
+      }
+    ]
+  }
+  

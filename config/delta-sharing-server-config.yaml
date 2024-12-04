@@ -1,0 +1,9 @@
+version: 1.0
+
+shares:
+  - name: "kamal_parquets"
+    schemas:
+      - name: "default"
+        tables:
+          - name: "all_parquets"
+            location: "/data/kamal"
