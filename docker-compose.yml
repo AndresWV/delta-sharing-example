@@ -6,6 +6,6 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./kamal:/data/kamal
+      - ./data:/data
       - ./config/delta-sharing-server-config.yaml:/config/delta-sharing-server-config.yaml
     command: ["--config", "/config/delta-sharing-server-config.yaml"]

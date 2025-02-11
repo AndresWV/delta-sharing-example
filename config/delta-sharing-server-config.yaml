@@ -1,9 +1,28 @@
 version: 1.0
-
+host: "localhost"
+port: 8080
+preSignedUrlTimeoutSeconds: 3600
+deltaTableCacheSize: 10
+# Whether we can accept working with a stale version of the table. This is useful when sharing
+# static tables that will never be changed.
+stalenessAcceptable: false
+# Whether to evaluate user provided `predicateHints`
+evaluatePredicateHints: false
+# Whether to evaluate user provided `jsonPredicateHints`
+evaluateJsonPredicateHints: true
+# Whether to evaluate user provided `jsonPredicateHints` for V2 predicates.
+evaluateJsonPredicateHintsV2: true
+# The maximum page size permitted by queryTable/queryTableChanges API.
+queryTablePageSizeLimit: 10000
+# The TTL of the page token generated in queryTable/queryTableChanges API (in milliseconds).
+queryTablePageTokenTtlMs: 259200000
+# The TTL of the refresh token generated in queryTable API (in milliseconds).
+refreshTokenTtlMs: 3600000
 shares:
-  - name: "kamal_parquets"
+  - name: "mobility"
     schemas:
       - name: "default"
         tables:
-          - name: "all_parquets"
-            location: "/data/kamal"
+          - name: "mtm"
+            location: "/data/mtm"      
+            id: "da508892-e4f0-4ed7-90c3-21d28af183ba"
